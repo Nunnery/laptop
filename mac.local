@@ -8,8 +8,12 @@ if [ ! -d "$HOME/.nvm/" ]; then
   mkdir "$HOME/.nvm"
 fi
 
-fancy_echo "Moving zprofile ..."
-sudo mv /etc/{zprofile,zshenv}
+if [ -f "/etc/zprofile" ]; then
+  fancy_echo "Moving zprofile ..."
+    sudo mv /etc/{zprofile,zshenv}
+else
+  fancy_echo "Already moved zprofile, skipping ..."
+fi
 
 brew_tap 'caskroom/cask'
 brew_install_or_upgrade 'brew-cask'
