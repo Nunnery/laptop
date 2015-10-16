@@ -40,4 +40,5 @@ env git clone --depth=1 https://github.com/Nunnery/laptop.git $HOME/laptop || {
 }
 
 printf "${BLUE}Installing laptop for you.${NORMAL}\n"
-(cd $HOME/laptop && sh mac 2>&1 | tee ~/laptop.log)
+cd $HOME/laptop
+sh mac 2>&1 | tee ~/laptop.log
