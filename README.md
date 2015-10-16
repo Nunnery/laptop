@@ -22,17 +22,13 @@ versions are welcome.
 Install
 -------
 
-Download, review, then execute the script:
+### via curl
 
-```sh
-curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
-less mac
-sh mac 2>&1 | tee ~/laptop.log
-```
+`sh -c "$(curl -fsSL https://raw.github.com/Nunnery/laptop/master/install.sh)"`
 
-Optionally, [install thoughtbot/dotfiles][dotfiles].
+### via wget
 
-[dotfiles]: https://github.com/thoughtbot/dotfiles#install
+`sh -c "$(wget https://raw.github.com/Nunnery/laptop/master/install.sh -O -)"`
 
 Debugging
 ---------
