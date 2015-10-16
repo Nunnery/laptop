@@ -43,6 +43,9 @@ else
   fancy_echo "Already have dotfiles installed, skipping ..."
 fi
 
+fancy_echo "Configuring git to store credentials in keychain ..."
+git config --global credential.helper osxkeychain
+
 if [ ! -d "$HOME/powerline-fonts/" ]; then
   fancy_echo "Installing Powerline-enhanced fonts ..."
   git clone https://github.com/powerline/fonts ~/powerline-fonts
