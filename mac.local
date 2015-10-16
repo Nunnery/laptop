@@ -29,13 +29,14 @@ append_to_zshrc 'export NVM_DIR=~/.nvm'
 append_to_zshrc 'source $(brew --prefix nvm)/nvm.sh'
 
 node_version="v4.2.1"
+fancy_echo "Installing Node.js $node_version"
 nvm install "$node_version"
 nvm use "$node_version"
 nvm alias default "$node_version"
 
 if [ ! -d "$HOME/dotfiles/" ]; then
   fancy_echo "Installing dotfiles ..."
-    git clone git clone git://github.com/Nunnery/dotfiles.git
+    git clone git://github.com/Nunnery/dotfiles.git
     env RCRC=$HOME/dotfiles/rcrc rcup
 else
   fancy_echo "Already have dotfiles installed, skipping ..."
