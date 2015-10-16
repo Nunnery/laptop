@@ -17,9 +17,10 @@ fi
 
 brew_tap 'caskroom/cask'
 brew_install_or_upgrade 'brew-cask'
+brew_tap 'caskroom/versions'
 
 brew cask install google-chrome
-brew cask install iterm2
+brew cask install iterm2-beta
 
 brew_install_or_upgrade 'nvm'
 
