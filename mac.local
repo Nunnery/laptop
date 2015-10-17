@@ -22,6 +22,9 @@ brew_tap 'caskroom/versions'
 brew cask install google-chrome
 brew cask install iterm2-beta
 
+brew_tap 'neovim/neovim'
+brew_install_or_upgrade 'neovim'
+
 brew_install_or_upgrade 'nvm'
 
 export NVM_DIR=~/.nvm
