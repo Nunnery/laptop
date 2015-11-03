@@ -44,6 +44,8 @@ nvm install "$node_version"
 nvm use "$node_version"
 nvm alias default "$node_version"
 
+git config --global url."https://".insteadOf git://
+
 if [ ! -d "$HOME/dotfiles/" ]; then
   fancy_echo "Installing dotfiles ..."
     git clone git://github.com/Nunnery/dotfiles.git ~/dotfiles
