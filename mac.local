@@ -16,6 +16,10 @@ else
 fi
 
 brew_install_or_upgrade 'wget'
+brew_install_or_upgrade 'thefuck'
+
+eval "$(thefuck --alias oops)"
+append_to_zshrc '$(thefuck --alias oops)'
 
 brew_tap 'caskroom/cask'
 brew_install_or_upgrade 'brew-cask'
