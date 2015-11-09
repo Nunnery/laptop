@@ -19,6 +19,7 @@ brew_install_or_upgrade 'wget'
 brew_install_or_upgrade 'maven'
 brew_install_or_upgrade 'ant'
 brew_install_or_upgrade 'gradle'
+brew_install_or_upgrade 'android'
 brew_install_or_upgrade 'thefuck'
 
 eval "$(thefuck --alias oops)"
